@@ -3,7 +3,8 @@
   --bg:#f8fafc;--text:#111827;--muted:#6b7280;--primary:#7c3aed;
   --primary-dark:#5b21b6;--accent:#22c55e;--line:#e5e7eb;--dark:#111827;
 }
-*{box-sizing:border-box}
+*{box-sizing:border-box
+ }
 body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
 a{color:inherit}
 .container{width:1180px;margin:0 auto}
@@ -47,5 +48,97 @@ textarea{min-height:120px;resize:vertical}
 .footer{background:var(--dark);color:#fff;padding:42px 0;margin-top:40px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}.footer a{color:#d8b4fe}
 
-/* МОБИЛЬНЫЕ СТИЛИ НАМЕРЕННО ОТСУТСТВУЮТ.
-   Проект предназначен для практической по адаптивной верстке. */
+@media (max-width: 768px){
+    .container{
+      width:100%;
+      max-width: 100%;
+      padding-left: 16px;
+      padding-right:16px;
+    }
+    .header-inner{
+      height: auto;
+      flex-direction: column;
+      padding: 16px 0;
+      gap:16 px;
+    }
+
+  .main-nav ul{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .hero{
+    padding: 40px 0
+  }
+
+  .hero h1{
+    font-size: 36px
+  }
+
+  .hero p{
+    font-size: 18px
+  }
+
+  .hero-actions{
+    justify-content: center;
+    flex-direction: column;
+    width: 100%
+  }
+
+  .btn{
+    width: 100%
+  }
+
+  .hero-image{
+    width: 100%
+  }
+
+  .cards,
+  .team-grid,
+  .stats,
+  .course-list
+  .footer-grid{
+    grid-template-columns: 1fr
+  }
+
+  .course-layout,
+  .about-layout,
+  .contact-layout{
+      grid-template-columns: 1fr
+  }
+
+  .sidebar{
+    position: static;
+  }
+
+  .feature-row{
+    flex-direction: column;
+  }
+
+  .feature{
+    width:100%
+  }
+
+  .form-row{
+    flex-direction:column;
+    gap:0;
+  }
+
+  .schedule{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .section,
+  .page-hero{
+    padding:40px 0;
+  }
+
+  .section-title{
+    font-size:28px;
+  }
+
+}
